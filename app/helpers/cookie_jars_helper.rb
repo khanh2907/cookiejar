@@ -1,0 +1,2 @@
+module CookieJarsHelper
+end
