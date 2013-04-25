@@ -16,5 +16,5 @@
 //= require_tree .
 
 $(document).ready(function() {
-            setInterval("location.reload(true)", 300000);
+            //setInterval("location.reload(true)", 300000);
  }); 
