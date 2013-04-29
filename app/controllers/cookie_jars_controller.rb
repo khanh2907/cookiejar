@@ -6,6 +6,31 @@ class CookieJarsController < ApplicationController
 
     @the_cookie_jar = CookieJar.find(3)
 
+    @level = @the_cookie_jar.level
+
+    if @level <100 && @level > 89
+      @level = 90
+    elsif @level <90 && @level > 79
+      @level = 80
+    elsif @level <80 && @level > 69
+       @level = 70
+    elsif @level <70 && @level > 59
+       @level = 70
+    elsif @level <60 && @level > 49
+       @level = 70
+    elsif @level <50 && @level > 39
+       @level = 70
+    elsif @level <40 && @level > 29
+       @level = 70
+    elsif @level <30 && @level > 19
+        @level = 70
+    elsif @level <20 && @level > 9
+         @level = 70
+    end
+   
+
+        
+
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @cookie_jars }
