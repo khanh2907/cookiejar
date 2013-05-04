@@ -15,20 +15,24 @@ class CookieJarsController < ApplicationController
     elsif @level <80 && @level > 69
        @level = 70
     elsif @level <70 && @level > 59
-       @level = 70
+       @level = 60
     elsif @level <60 && @level > 49
-       @level = 70
+       @level = 50
     elsif @level <50 && @level > 39
-       @level = 70
+       @level = 40
     elsif @level <40 && @level > 29
-       @level = 70
+       @level = 30
     elsif @level <30 && @level > 19
-        @level = 70
+        @level = 20
     elsif @level <20 && @level > 9
-         @level = 70
+         @level = 10
+    elsif @level < 10 && @level > 5
+        @level = 5
     end
    
-
+    if @level > 100
+      @level = 100
+    end
         
 
     respond_to do |format|
